@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  height: 100vh;
+  width: 100%;
+  background: #6a85b6 -webkit-gradient(linear, left bottom, left top, from(#6a85b6), to(#bac8e0)) no-repeat;
+  background: #6a85b6 linear-gradient(to top, #6a85b6 0%, #bac8e0 100%) no-repeat;
+}
+
+section {
+  margin-top: 100px;
+}
+
+section h1, section h2 {
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+}
+
+section p {
+  margin-bottom: 3rem;
+  line-height: 1.5rem;
+}
+
+section .wrapper {
+  max-width: 1000px;
+  padding: 20px;
+  margin: auto;
+}
+
+.content {
+  min-height: 700px;
+}
+
+.content h1 {
+  color: #173c83;
+  margin-top: 15vh;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.content .hero-image {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 100px auto;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
+}
+
+.content .hero-image img {
+  width: 50%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.content .hero-image img.left {
+  top: -20px;
+}
+
+.content .hero-image img.right {
+  -o-object-position: 110% 0;
+     object-position: 110% 0;
+  right: 0;
+  top: 20px;
+}
+
+.content .hero-image:hover img {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+.content .hero-image:hover img.left {
+  left: 0;
+  top: 0;
+}
+
+.content .hero-image:hover img.right {
+  right: 0;
+  top: 0;
+}
+/*# sourceMappingURL=style.css.map */
