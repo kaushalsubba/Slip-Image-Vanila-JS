@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dummy</title>
+    <title>Vanila JS: Slip Image Effect</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1 class="rellax"  data-rellax-speed="2">Hello This is Nischhal Subba</h1>
 
-        <div class="slip-half hero-image">
+        <div class="split-half hero-image">
             <img src="img/nischhal.jpg" class="rellax" />
         </div>
     </div>
@@ -34,29 +34,41 @@
 
 
 
+    <section class="protfolio content mb-5">
+        <div class="split-half hero-image">
+            <img src="img/nischhal2.jpg" />
+        </div>
+    </section>
+
+
     
     
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 
     <script>
 
-        var splitHalf=document.querySelectorAll('.slip-half');
+        var splitHalf=document.querySelectorAll('.split-half');
         splitHalf.forEach(el=>{
 
             // Bug fix for parallex effect
             el.addEventListener('mouseover',(e)=>{
-                var splitHalfImages=el.querySelectorAll('.slip-half img');
+                var splitHalfImages=el.querySelectorAll('.split-half img');
                 splitHalfImages.forEach(el=>{
                     el.style.removeProperty("transform");
                 });
             });
             
             var leftHalf=el.querySelector('img').cloneNode();
-            leftHalf.setAttribute("data-rellax-speed",3);
+            if(leftHalf.classList.contains("rellax"))
+                leftHalf.setAttribute("data-rellax-speed",1);
+
             leftHalf.classList.add("left");
             
             var rightHalf=el.querySelector('img').cloneNode();
-            rightHalf.setAttribute("data-rellax-speed",-1);
+
+            if(rightHalf.classList.contains("rellax"))
+                rightHalf.setAttribute("data-rellax-speed",-1);
+
             rightHalf.classList.add("right");
 
             el.textContent="";

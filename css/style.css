@@ -33,6 +33,10 @@ section .wrapper {
   margin: auto;
 }
 
+section.protfolio {
+  margin-top: 10px;
+}
+
 .content {
   min-height: 700px;
 }
@@ -94,5 +98,9 @@ section .wrapper {
 .content .hero-image:hover img.right {
   right: 0;
   top: 0;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
 }
 /*# sourceMappingURL=style.css.map */
